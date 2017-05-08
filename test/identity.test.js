@@ -20,4 +20,22 @@ describe('identity()', () => {
     };
     expect(_.identity(val)).toBe(val);
   });
+
+  it('returns the same boolean if given a boolean', () => {
+    expect(_.identity(true)).toBe(true);
+  });
+
+  it('returns the same string if given a string', () => {
+    const val = "abc";
+    expect(_.identity(val)).toBe(val);
+  });
+
+  it('returns the same symbol if given a symbol', () => {
+    const val = Symbol('a Symbol');
+    expect(_.identity(val)).toBe(val);
+  });
+
+  it('returns undefined if given undefined', () => {
+    expect(_.identity(undefined)).toBe(undefined);
+  });
 });
