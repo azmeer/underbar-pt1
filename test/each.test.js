@@ -39,5 +39,16 @@ describe('each()', () => {
     });
     expect(count).toBe(3);
   });
+
+  it('doesn\'t do anything on an empty non-array-like object', () => {
+    const obj = {
+    };
+    let count = 0;
+    _.each(obj, function(value, key, iteratedObj) {
+      expect(value).toEqual(iteratedObj[key]);
+      count += 1;
+    });
+    expect(count).toBe(0);
+  });
 });
 
