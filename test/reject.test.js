@@ -18,4 +18,20 @@ describe('reject()', () => {
     const orderItems = _.reject(order, (value) => value === null);
     expect(orderItems).toEqual(['burger', 'ketchup', 'cookie']);
   });
+
+  it('rejects the indexed numbers from an array-like object', () => {
+    const assorted = {
+      length: 5,
+      0: 'a',
+      1: 3,
+      2: 2342,
+      3: 'Hello, Mrs. Robinson',
+      4: 'Jeremy',
+      sancho: 'panza',
+      theonetrueanswer: 42
+    };
+    const assortedStrings = _.reject(assorted, (value) => !isNaN(value));
+    expect(assortedStrings).toEqual(['a', 'Hello, Mrs. Robinson', 'Jeremy']);
+  });
+  
 });
