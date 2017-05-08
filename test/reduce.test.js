@@ -23,4 +23,15 @@ describe('reduce()', () => {
                             ages + ((ages.length > 0) ? ', ': '') + person.age, "");
      expect(result).toEqual('12, 999, 14');
   });
+
+  it('reduces an array-like object to a sum of its values', () => {
+    const arrayLikeObj = {
+      length: 3,
+      0: 45,
+      1: 25,
+      2: 30
+    };
+    const result = _.reduce(arrayLikeObj, (sum, number) => sum + number, 0);
+    expect(result).toBe(100);
+  });
 });

@@ -31,4 +31,15 @@ describe('contains()', () => {
     expect(_.contains(ponies, 'Applejack')).toBe(false);
   });
 
+  it('returns true if the value is in an array-like object', () => {
+    const ponies = {
+      'length' : 4,
+      0: 'Fluttershy',
+      1: 'Pinkie Pie',
+      2: 'Rainbow Dash',
+      3: 'Rarity'
+    };
+    expect(_.contains(ponies, 'Rarity')).toBe(true);
+  });
+
 });
