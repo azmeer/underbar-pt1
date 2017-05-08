@@ -23,4 +23,19 @@ describe('filter()', () => {
     const abilityScores = _.filter(characterAttributes, (value) => !isNaN(value));
     expect(abilityScores).toEqual([4, 7, 10, 16, 5, 4]);
   });
+
+  it('filters an array-like object to the indexed strings', () => {
+    const assorted = {
+      length: 5,
+      0: 'a',
+      1: 3,
+      2: 2342,
+      3: 'Hello, Mrs. Robinson',
+      4: 'Jeremy',
+      sancho: 'panza',
+      theonetrueanswer: 42
+    };
+    const assortedStrings = _.filter(assorted, (value) => typeof (value) === 'string');
+    expect(assortedStrings).toEqual(['a', 'Hello, Mrs. Robinson', 'Jeremy']);
+  });
 });
