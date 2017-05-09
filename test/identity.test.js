@@ -26,7 +26,7 @@ describe('identity()', () => {
   });
 
   it('returns the same string if given a string', () => {
-    const val = "abc";
+    const val = 'abc';
     expect(_.identity(val)).toBe(val);
   });
 
