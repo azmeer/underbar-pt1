@@ -18,22 +18,24 @@ describe('every()', () => {
     });
 
     it('returns true if all the indexed numbers in an array-like object test positive', () => {
-      const arrayLikeObj = { length: 3,
-                             0: 5,
-                             1: 2,
-                             2: 6,
-                             3: 15
-                           };
+      const arrayLikeObj = {
+        length: 3,
+        0: 5,
+        1: 2,
+        2: 6,
+        3: 15
+      };
       expect(_.every(arrayLikeObj, num => num < 10)).toBe(true);
     });
 
     it('returns false if not all the indexed numbers in an array-like object test positive', () => {
-      const arrayLikeObj = { length: 4,
-                             0: 5,
-                             1: 2,
-                             2: 6,
-                             3: 15
-                           };
+      const arrayLikeObj = {
+        length: 4,
+        0: 5,
+        1: 2,
+        2: 6,
+        3: 15
+      };
       expect(_.every(arrayLikeObj, num => num < 10)).toBe(false);
     });
   });

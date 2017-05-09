@@ -23,22 +23,24 @@ describe('some()', () => {
 
   
   it('returns true if at least one of the indexed numbers in an array-like object test positive', () => {
-    const arrayLikeObj = { length: 4,
-                           0: 5,
-                           1: 2,
-                           2: 6,
-                           3: 15
-                         };
+    const arrayLikeObj = {
+      length: 4,
+      0: 5,
+      1: 2,
+      2: 6,
+      3: 15
+    };
     expect(_.some(arrayLikeObj, num => num > 10)).toBe(true);
   });
 
   it('returns false if none of the indexed numbers in an array-like object test positive', () => {
-    const arrayLikeObj = { length: 3,
-                           0: 5,
-                           1: 2,
-                           2: 6,
-                           3: 15
-                         };
+    const arrayLikeObj = {
+      length: 3,
+      0: 5,
+      1: 2,
+      2: 6,
+      3: 15
+    };
     expect(_.some(arrayLikeObj, num => num > 10)).toBe(false);
   });
 });

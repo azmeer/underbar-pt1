@@ -14,14 +14,14 @@ describe('reduce()', () => {
   });
 
   it('reduces an object containing people to a single string of their ages', () => {
-     const people = {
-       'Harriet' : {age: 12},
-       'Lazarus' : {age: 999},
-       'Bethany' : {age: 14}
-     };
+    const people = {
+      'Harriet' : {age: 12},
+      'Lazarus' : {age: 999},
+      'Bethany' : {age: 14}
+    };
     const result = _.reduce(people, (ages, person) =>
-                            ages + ((ages.length > 0) ? ', ': '') + person.age, "");
-     expect(result).toEqual('12, 999, 14');
+                            ages + ((ages.length > 0) ? ', ': '') + person.age, '');
+    expect(result).toEqual('12, 999, 14');
   });
 
   it('reduces an array-like object to a sum of its values', () => {

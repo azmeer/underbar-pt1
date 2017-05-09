@@ -27,8 +27,8 @@ describe('indexOf()', () => {
   });
 
   it('returns -1 when searching after the offset for the only match', () => {
-     const arr = ['foo', 'bar', 'baz', 'bar', 'bar'];
-     expect(_.indexOf(arr, 'foo', 1)).toBe(-1);
+    const arr = ['foo', 'bar', 'baz', 'bar', 'bar'];
+    expect(_.indexOf(arr, 'foo', 1)).toBe(-1);
   });
 
 });

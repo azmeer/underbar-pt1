@@ -7,12 +7,13 @@ describe('uniq()', () => {
   });
 
   it('de-dups the values of an object', () => {
-    const fruit = { 1: 'orange',
-                    2: 'kumquat',
-                    3: 'apple',
-                    4: 'cherry',
-                    5: 'orange'
-                  };
+    const fruit = {
+      1: 'orange',
+      2: 'kumquat',
+      3: 'apple',
+      4: 'cherry',
+      5: 'orange'
+    };
     expect(_.uniq(fruit)).toEqual(['orange', 'kumquat', 'apple', 'cherry']);
   });
   
