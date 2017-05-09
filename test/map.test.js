@@ -9,7 +9,7 @@ describe('map()', () => {
 
   it('returns an empty array from an empty array', () => {
     const arr = [];
-    const mappedArr = [];
+    const mappedArr = _.map([], (el) => el * el);
     expect(mappedArr).toEqual([]);
   });
 
